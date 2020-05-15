@@ -1,11 +1,9 @@
 pipeline {
     agent any
-
     stages('Build') {
  
       steps {
-              input message: 'Proceed or Abort', submitter: 'Anup'
-	       bat label: '', script: 'mvn -f C:\\dev\\code\\5-5-20\\ejm\\EJMWebMVC install -Dmaven.test.skip=true'
+               bat label: '', script: 'mvn -f C:\\dev\\code\\5-5-20\\ejm\\EJMWebMVC install -Dmaven.test.skip=true'
 
             }
         }
