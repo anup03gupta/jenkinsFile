@@ -7,10 +7,12 @@ agent any
             }  
          }
          
-       stage ('Sonar analysis') { 
-agent { label 'master' } 	 
-           steps{
-       bat label: '', script: 'mvn -f C:\\dev\\code\\5-5-20\\ejm\\EJMParent sonar:sonar -Dsonar.projectKey=EJMParent -Dsonar.host.url=http://localhost:9000 -Dsonar.login=dcde97d160fd57be13463dc93b38df663550dd8a'
-   }
-}
+stage ('EJMWebMVC') { 
+ agent {
+           label "master"
+                    }
+                    steps {
+                        build job: 'EJMWebMVC'
+                    }
 }}
+}
