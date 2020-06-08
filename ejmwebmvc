@@ -1,0 +1,11 @@
+pipeline {
+agent any
+   stages{
+   stage ('Build') {
+    steps{
+     bat label: '', script: 'mvn -f C:\\dev\\code\\5-5-20\\ejm\\EJMWebMVC test -fae -Dmaven.test.failure.ignore=true'
+            }  
+         }
+       
+   }
+}
