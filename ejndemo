@@ -8,9 +8,8 @@ agent any
          }
          
 stage ('EJMWebMVC') { 
- agent {
-           label "master"
-                    }
+ agent none{
+                  }
                     steps {
                         build job: 'EJMDEVMVC'
                     }
